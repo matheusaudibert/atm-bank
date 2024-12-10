@@ -36,7 +36,7 @@ std::string getNumericInput(const std::string& prompt) {
 }
 
 void showHeader() {
-    setColor(14); //amarelo
+    setColor(14); // amarelo
     std::cout << "╔═══════════════════════════════════════╗\n";
     std::cout << "║            BANCO VIRTUAL              ║\n";
     std::cout << "╚═══════════════════════════════════════╝\n\n";
@@ -44,19 +44,20 @@ void showHeader() {
 }
 
 void showMainMenu() {
-    setColor(11); //azulclaro
+    setColor(11); // azul claro
     std::cout << "╔══════════════ MENU PRINCIPAL ═════════════╗\n";
     std::cout << "║                                           ║\n";
     std::cout << "║   1. Acessar Conta                        ║\n";
     std::cout << "║   2. Criar Nova Conta                     ║\n";
-    std::cout << "║   3. Sair                                 ║\n";
+    std::cout << "║   3. Listar Todas as Contas               ║\n";
+    std::cout << "║   4. Sair                                 ║\n";
     std::cout << "║                                           ║\n";
     std::cout << "╚═══════════════════════════════════════════╝\n";
     setColor(7);
 }
 
 void showAccountMenu(double balance) {
-    setColor(10); //verde
+    setColor(10); // verde
     std::cout << "╔═════════════ MENU DA CONTA ════════════╗\n";
     std::cout << "║                                        ║\n";
     std::cout << "║  Saldo Atual: R$ " << std::fixed << std::setprecision(2) << std::setw(14) << balance << "        ║\n";
@@ -71,13 +72,13 @@ void showAccountMenu(double balance) {
 }
 
 void showError(const std::string& message) {
-    setColor(12); //vermelho
+    setColor(12); // vermelho
     std::cout << "ERRO: " << message << "\n";
     setColor(7);
 }
 
 void showSuccess(const std::string& message) {
-    setColor(10); // verdee
+    setColor(10); // verde
     std::cout << "\nSUCESSO: " << message << "\n";
     setColor(7);
 }
@@ -98,7 +99,7 @@ int main() {
         clearScreen();
         showHeader();
 
-        if (choice == 3) {
+        if (choice == 4) {
             break;
         }
 
@@ -182,6 +183,14 @@ int main() {
                     showError("Número de conta já existe!");
                 }
                 Sleep(2000);
+                break;
+            }
+
+            case 3: {
+                atm.listAccounts();
+                std::cout << "\nPressione ENTER para continuar...";
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cin.get();
                 break;
             }
 

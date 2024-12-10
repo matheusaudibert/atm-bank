@@ -32,7 +32,6 @@ bool ATM::login(int accountNumber, int pin) {
 }
 
 bool ATM::createAccount(int accountNumber, int pin) {
-
     for (const auto& acc : accounts) {
         if (acc.getAccountNumber() == accountNumber) {
             return false;
@@ -67,4 +66,11 @@ double ATM::checkBalance() {
 
 void ATM::logout() {
     currentAccount = nullptr;
+}
+
+void ATM::listAccounts() {
+    std::cout << "Lista de Contas:\n";
+    for (const auto& acc : accounts) {
+        std::cout << "Número da Conta: " << acc.getAccountNumber() << "\n";
+    }
 }

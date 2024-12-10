@@ -22,6 +22,7 @@ public:
     void loadAccounts();
     void saveAccounts();
     void logout();
+    void listAccounts(); // Nova função para listar contas
     ~ATM();
 };
 
