@@ -1,12 +1,12 @@
 # ATM System in C++
 
-Este projeto é uma implementação simples de um sistema de caixa eletrônico (ATM) em C++, permitindo aos usuários realizar operações bancárias básicas, como login, criação de contas, depósitos, saques, consultas de saldo e listagem de contas existentes.
+This project is a simple implementation of an ATM system in C++, allowing users to perform basic banking operations such as login, account creation, deposits, withdrawals, balance inquiries, and listing existing accounts.
 
-## Funcionalidades
+## Features
 
-- **Login de Usuário**: Permite que o usuário acesse sua conta bancária com um nome de usuário e senha.
-- **Criação de Conta**: O usuário pode criar uma nova conta fornecendo um nome de usuário e senha.
-- **Depósitos**: Os usuários podem depositar uma quantia de dinheiro em sua conta.
-- **Saques**: Os usuários podem realizar saques da sua conta, desde que haja saldo suficiente.
-- **Consulta de Saldo**: O usuário pode verificar o saldo atual da sua conta.
-- **Listar Contas**: Um administrador pode listar todas as contas existentes no sistema, com seus respectivos saldos.
+- **User Login**: Allows the user to access their bank account using a username and password.
+- **Account Creation**: Users can create a new account by providing a username and password.
+- **Deposits**: Users can deposit a certain amount of money into their account.
+- **Withdrawals**: Users can make withdrawals from their account, provided there is sufficient balance.
+- **Balance Inquiry**: Users can check the current balance of their account.
+- **List Accounts**: An administrator can list all existing accounts in the system, along with their respective balances.
